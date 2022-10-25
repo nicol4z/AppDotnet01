@@ -15,6 +15,8 @@ namespace AppDotnet01
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IDTarea { get; set; }
 
+        public string nombre { get; set; }
+
         public string estado { get; set; }
 
         public string avance { get; set; }

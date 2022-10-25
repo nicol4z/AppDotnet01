@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AppDotnet01.Migrations
 {
-    public partial class InitDB : Migration
+    public partial class initDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -43,6 +43,7 @@ namespace AppDotnet01.Migrations
                 {
                     IDTarea = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     avance = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IDProyecto = table.Column<int>(type: "int", nullable: false)

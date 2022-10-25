@@ -111,6 +111,10 @@ namespace AppDotnet01.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("IDTarea");
 
                     b.HasIndex("IDProyecto");

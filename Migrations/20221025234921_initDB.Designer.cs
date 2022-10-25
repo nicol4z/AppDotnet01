@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDotnet01.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20221025211408_InitDB")]
-    partial class InitDB
+    [Migration("20221025234921_initDB")]
+    partial class initDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,6 +110,10 @@ namespace AppDotnet01.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

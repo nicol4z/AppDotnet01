@@ -33,7 +33,18 @@ namespace AppDotnet01
         private void BotonIngresar_Click(object sender, RoutedEventArgs e)
         {
            
+            if(string.IsNullOrEmpty(Nombre.Text) || string.IsNullOrEmpty(Estado.Text) ||
+                string.IsNullOrEmpty(Avance.Text) || string.IsNullOrEmpty(Proyectos.Text))
+            {
+                MessageBox.Show("Ningun campo puede estar vacio");
+            }
+            else
+            {
+                Contexto contexto = new Contexto();
 
+          
+
+            }
         }
     }
 }
