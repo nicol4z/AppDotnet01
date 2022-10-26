@@ -23,11 +23,12 @@ namespace AppDotnet01
         {
             InitializeComponent();
             Contexto contexto = new Contexto();
-
-
             List<Proyecto> proyectos = contexto.Proyectos.ToList();
 
-            
+            foreach (Proyecto p in proyectos)
+            {
+                Proyectos.Items.Add(p.nombre);
+            }
         }
 
         private void BotonIngresar_Click(object sender, RoutedEventArgs e)
@@ -40,11 +41,26 @@ namespace AppDotnet01
             }
             else
             {
-                Contexto contexto = new Contexto();
-
+               
           
 
             }
+        }
+
+        public void CargarDatos()
+        {
+            Contexto contexto = new Contexto();
+            List<Proyecto> proyectos = contexto.Proyectos.ToList();
+
+            foreach(Proyecto p in proyectos)
+            {
+                Proyectos.Items.Add(p.nombre);
+            }
+        }
+
+        public void AsignarId()
+        {
+
         }
     }
 }

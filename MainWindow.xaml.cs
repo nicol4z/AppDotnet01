@@ -49,6 +49,11 @@ namespace AppDotnet01
         private void BotonProyecto_Click(object sender, RoutedEventArgs e)
         {
             //Asignar Material
+            AsignarMaterial1 asignarMaterial = new AsignarMaterial1();
+            asignarMaterial.Show();
+
+            
+
         }
     }
 }

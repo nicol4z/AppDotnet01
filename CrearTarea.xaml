@@ -16,7 +16,7 @@
         <TextBox x:Name="Nombre" HorizontalAlignment="Center" Margin="0,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
         <TextBox x:Name="Estado" HorizontalAlignment="Center" Margin="0,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
         <TextBox x:Name="Avance" HorizontalAlignment="Center" Margin="0,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-        <ComboBox x:Name="Proyectos" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Width="199"/>
+        <ComboBox x:Name="Proyectos" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Width="199" Background="{x:Null}" Foreground="Black"/>
         <Button x:Name="BotonIngresar" Content="Ingresar" HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top" Click="BotonIngresar_Click"/>
 
     </Grid>
