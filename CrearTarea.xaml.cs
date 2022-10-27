@@ -40,8 +40,17 @@ namespace AppDotnet01
 
                 Tarea tarea = new Tarea() { nombre = Nombre.Text , estado = Estado.Text, avance = Avance.Text, IDProyecto = AsignarId()};
                 contexto.Tareas.Add(tarea);
-                contexto.SaveChanges();
-          
+                if(contexto.SaveChanges() >0)
+                {
+                    MessageBox.Show("La tarea fue registrada");
+                    Nombre.Clear();
+                    Estado.Clear();
+                    Avance.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al registrar la tarea");
+                }
 
             }
         }
