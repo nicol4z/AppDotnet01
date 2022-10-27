@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="ModificarTarea1" Height="450" Width="337">
     <Grid Margin="0,0,-2,0" Width="339">
-        <Label x:Name="label" Content="Modificar Tarea" HorizontalAlignment="Left" Margin="97,10,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label x:Name="label1" Content="Nombre Tarea" HorizontalAlignment="Left" Margin="120,64,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Avance" Content="Avance" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top"/>
         <Label x:Name="nuevoEstado" Content="Estado" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top"/>
@@ -15,5 +14,6 @@
         <TextBox x:Name="Avance1" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
         <TextBox x:Name="Estado" HorizontalAlignment="Center" Margin="0,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
         <Button x:Name="ModificarTarea" Content="Modificar Tarea" HorizontalAlignment="Center" Margin="0,351,0,0" VerticalAlignment="Top"/>
+        <Label Content="Modificar Tarea" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Brush Script MT"/>
     </Grid>
 </Window>

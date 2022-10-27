@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace AppDotnet01
         public ModificarTarea1()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
         private void ModificarTarea_Click(object sender, RoutedEventArgs e)
