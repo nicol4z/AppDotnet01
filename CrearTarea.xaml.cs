@@ -44,6 +44,11 @@ namespace AppDotnet01
           
 
             }
+            Nombre.Clear();
+            Estado.Clear();
+            Avance.Clear();
+            Proyectos.SelectedItem = null;
+            
         }
 
         public void CargarDatos()

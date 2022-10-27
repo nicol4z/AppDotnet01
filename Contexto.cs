@@ -11,7 +11,7 @@ namespace AppDotnet01
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-MIBUEOA;Database=dbDotnet;Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Server=LAPTOP-COE92JK8;Database=dbDotnet;Trusted_Connection=True");
         }
 
         public DbSet<Proyecto> Proyectos { get; set; }
