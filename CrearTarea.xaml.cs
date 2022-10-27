@@ -19,16 +19,11 @@ namespace AppDotnet01
     /// </summary>
     public partial class CrearTarea : Window
     {
+        int Indice;
         public CrearTarea()
         {
             InitializeComponent();
-            Contexto contexto = new Contexto();
-            List<Proyecto> proyectos = contexto.Proyectos.ToList();
-
-            foreach (Proyecto p in proyectos)
-            {
-                Proyectos.Items.Add(p.nombre);
-            }
+            CargarDatos();
         }
 
         private void BotonIngresar_Click(object sender, RoutedEventArgs e)
@@ -41,7 +36,11 @@ namespace AppDotnet01
             }
             else
             {
-               
+                Contexto contexto = new Contexto();
+
+                Tarea tarea = new Tarea() { nombre = Nombre.Text , estado = Estado.Text, avance = Avance.Text, IDProyecto = AsignarId()};
+                contexto.Tareas.Add(tarea);
+                contexto.SaveChanges();
           
 
             }
@@ -51,16 +50,27 @@ namespace AppDotnet01
         {
             Contexto contexto = new Contexto();
             List<Proyecto> proyectos = contexto.Proyectos.ToList();
+            
 
-            foreach(Proyecto p in proyectos)
+            foreach (Proyecto p in proyectos)
             {
                 Proyectos.Items.Add(p.nombre);
             }
         }
 
-        public void AsignarId()
+        public int AsignarId()
         {
-
+            Contexto contexto = new Contexto();
+            List<Proyecto> proyectos = contexto.Proyectos.ToList();
+            int idProyecto = 0;
+            foreach(Proyecto p in proyectos)
+            {
+                if (p.nombre == Proyectos.Text)
+                {
+                    idProyecto = p.Id;
+                }
+            }
+            return idProyecto;
         }
     }
 }
