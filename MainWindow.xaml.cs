@@ -44,6 +44,8 @@ namespace AppDotnet01
         private void BotonTarea_Click(object sender, RoutedEventArgs e)
         {
             //Modificar Tarea
+            ModificarTarea1 modificar = new ModificarTarea1();
+            modificar.Show();
         }
 
         private void BotonProyecto_Click(object sender, RoutedEventArgs e)
